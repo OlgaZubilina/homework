@@ -9,7 +9,6 @@ public class Fraction {
         this.setDenominator(denominator);
     }
 
-
     private int getNumerator() {
         return numerator;
     }
@@ -49,7 +48,7 @@ public class Fraction {
 
     }
 
-    public Fraction reduceFraction(){
+    private Fraction reduceFraction(){
         int x = numerator;
         int y = denominator;
         while (x % 2 == 0 && y % 2 == 0) {
