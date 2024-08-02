@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class MainApplication {
     public static void main(String[] args) {
 
-        Point a = new Point(1, 3);
+      /*  Point a = new Point(1, 3);
         Point b = new Point(5, 8);
         Point c = new Point(10, 11);
         Point d = new Point(15, 19);
@@ -42,7 +42,15 @@ public class MainApplication {
         poly2.getPoint(1).setX(12);
         poly2.getPoint(1).setY(8);
         System.out.println(poly2);
-        System.out.println(Arrays.toString(poly2.getLines()));
+        System.out.println(Arrays.toString(poly2.getLines()));*/
+
+        Square abcd = new Square(new Point(9,4),5);
+        System.out.println(abcd);
+        Point pointA = new Point(6,4);
+        abcd.setPoint(pointA);
+        System.out.println(abcd);
+        System.out.println(abcd.getPoint());
+        System.out.println(abcd.getSideLength());
     }
 
 }
