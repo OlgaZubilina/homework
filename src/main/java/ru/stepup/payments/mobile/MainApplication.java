@@ -44,13 +44,15 @@ public class MainApplication {
         System.out.println(poly2);
         System.out.println(Arrays.toString(poly2.getLines()));*/
 
-        Square abcd = new Square(new Point(9,4),5);
+        /*Square abcd = new Square(new Point(9,4),5);
         System.out.println(abcd);
         Point pointA = new Point(6,4);
         abcd.setPoint(pointA);
         System.out.println(abcd);
         System.out.println(abcd.getPoint());
-        System.out.println(abcd.getSideLength());
+        System.out.println(abcd.getSideLength());*/
+        Point3D f = new Point3D(4,5,6);
+        System.out.println(f);
     }
 
 }
