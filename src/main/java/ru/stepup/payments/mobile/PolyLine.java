@@ -3,7 +3,7 @@ package ru.stepup.payments.mobile;
 
 import java.util.Arrays;
 
-public class PolyLine {
+public class PolyLine implements Measurable{
     static Point[] points;
 
     public PolyLine(Point[] points) {
@@ -22,7 +22,7 @@ public class PolyLine {
         return lines;
     }
 
-    public double getLengthPolylyneWithPoints() {
+    public double getLength() {
         double length = 0.0;
         for (int i = 0; i < points.length - 1; i++)
             length = length + Math.sqrt(Math.pow((points[i + 1].getX() - points[i].getX()), 2) + Math.pow((points[i + 1].getY() - points[i].getY()), 2));

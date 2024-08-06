@@ -1,6 +1,6 @@
 package ru.stepup.payments.mobile;
 
-public class Line {
+public class Line implements Measurable{
     private Point point1;
     private Point point2 ;
 
@@ -8,8 +8,6 @@ public Line(Point point1, Point point2){
     this.point1 = point1;
     this.point2 = point2;
     }
-
-
 
     public Point getPoint1() {
         return point1;

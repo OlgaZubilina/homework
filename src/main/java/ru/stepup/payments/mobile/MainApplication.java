@@ -30,34 +30,38 @@ public class MainApplication {
                 new Point(8, 9)});
         System.out.println(poly2);
         //2. Рассчитать длину Ломаной
-        System.out.println(poly2.getLengthPolylyneWithPoints());
+        System.out.println(poly2.getLength());
         //3.Получить у Ломаной массив Линий
         System.out.println(Arrays.toString(poly2.getLines()));
         //4.Рассчитать длину массива Линий
         System.out.println(poly2.getLengthPolylyneWithLines());
         //5.Сравнить длину Ломаной и массива Линий: они должны совпасть
-        System.out.println(poly2.getLengthPolylyneWithPoints() == poly2.getLengthPolylyneWithLines());
+        System.out.println(poly2.getLength() == poly2.getLengthPolylyneWithLines());
         //6. Изменить координаты Точки {2,8} таким образом, чтобы она стала иметь значение {12,8}.
         // Если изменения отразились в данной точке, в Ломаной и в двух Линиях массива (из пункта 3), то задача решена верно
         poly2.getPoint(1).setX(12);
         poly2.getPoint(1).setY(8);
         System.out.println(poly2);
         System.out.println(Arrays.toString(poly2.getLines()));
-
-
         ClosedPolyLine poly1 = new ClosedPolyLine(new Point[]{
                 new Point(1, 5),
                 new Point(2, 8),
                 new Point(5, 3),
                 new Point(8, 9)});
-        System.out.println(poly1.getLengthPolylyneWithPoints());
+        System.out.println(poly1.getLength());
         PolyLine poly3 = new ClosedPolyLine(new Point[]{
                 new Point(1, 5),
                 new Point(2, 8),
                 new Point(5, 3),
                 new Point(8, 9)});
+        System.out.println(poly3.getLength());
 
-        System.out.println(poly3.getLengthPolylyneWithPoints());
+        Measurable m = poly2;
+        Measurable f = poly1;
+        System.out.println(m.getLength());
+        System.out.println(f.getLength());
+
+
 
       /*  Square abcd = new Square(new Point(9,4),5);
         System.out.println(abcd);
