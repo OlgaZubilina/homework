@@ -4,16 +4,17 @@ package ru.stepup.payments.mobile;
 import java.util.Arrays;
 
 public class PolyLine {
-    private Point[] points;
+    static Point[] points;
 
     public PolyLine(Point[] points) {
-        this.points = points;
+        PolyLine.points = points;
     }
 
     public Point getPoint(int n) {
         return points[n];
 
     }
+
     public Line[] getLines() {
         Line[] lines = new Line[points.length - 1];
         for (int i = 0; i < points.length - 1; i++)

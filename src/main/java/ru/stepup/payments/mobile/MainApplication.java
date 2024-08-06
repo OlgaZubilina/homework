@@ -19,7 +19,7 @@ public class MainApplication {
         cd.getPoint2().setX(3);
         cd.getPoint2().setY(54);
         System.out.println(cd);
-        System.out.println(cd.getLength() + bc.getLength() + ab.getLength());
+        System.out.println(cd.getLength() + bc.getLength() + ab.getLength());*/
         //Создаем ломаную линию
        //Задание №3 Объекты и классы. Ломаная линия
         //1 Создать Ломаную, проходящую через точки {1;5}, {2;8}, {5;3}, {8,9}
@@ -42,17 +42,32 @@ public class MainApplication {
         poly2.getPoint(1).setX(12);
         poly2.getPoint(1).setY(8);
         System.out.println(poly2);
-        System.out.println(Arrays.toString(poly2.getLines()));*/
+        System.out.println(Arrays.toString(poly2.getLines()));
 
-        /*Square abcd = new Square(new Point(9,4),5);
+
+        ClosedPolyLine poly1 = new ClosedPolyLine(new Point[]{
+                new Point(1, 5),
+                new Point(2, 8),
+                new Point(5, 3),
+                new Point(8, 9)});
+        System.out.println(poly1.getLengthPolylyneWithPoints());
+        PolyLine poly3 = new ClosedPolyLine(new Point[]{
+                new Point(1, 5),
+                new Point(2, 8),
+                new Point(5, 3),
+                new Point(8, 9)});
+
+        System.out.println(poly3.getLengthPolylyneWithPoints());
+
+      /*  Square abcd = new Square(new Point(9,4),5);
         System.out.println(abcd);
         Point pointA = new Point(6,4);
         abcd.setPoint(pointA);
         System.out.println(abcd);
         System.out.println(abcd.getPoint());
-        System.out.println(abcd.getSideLength());*/
+        System.out.println(abcd.getSideLength());
         Point3D f = new Point3D(4,5,6);
         System.out.println(f);
-    }
+    }*/
 
-}
+}}
