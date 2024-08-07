@@ -38,5 +38,18 @@ public class Solution {
         System.out.println(fr.doubleValue());
         System.out.println(fr.longValue());
         System.out.println(fr.floatValue());
+
+
+
     }
+    ArrayList<Number> arr1 = new ArrayList<>();
+
+
+
+    double sumAll(ArrayList<Number> arr){
+        double sum = 0.0;
+        for (Number i:arr){
+            sum = sum+i.doubleValue();
+        }
+        return sum;}
 }
