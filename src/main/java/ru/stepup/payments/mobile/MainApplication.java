@@ -60,7 +60,7 @@ public class MainApplication {
         Measurable f = poly1;
         System.out.println(m.getLength());
         System.out.println(f.getLength());
-
+        System.out.println(m.getLength("string"));
 
 
       /*  Square abcd = new Square(new Point(9,4),5);
