@@ -15,7 +15,7 @@ public class Solution {
         System.out.println(s2.getGrades());
         s1.setGrade(5);
         System.out.println(s1.getGrades());*/
-       Department dep1 = new Department("develop");
+        /*  Department dep1 = new Department("develop");
        Department dep2 = new Department("analityc");
        Department dep3 = new Department("qa");
         Employee y1 = new Employee("Vanya",dep1);
@@ -31,6 +31,12 @@ public class Solution {
         System.out.println(y2);
         System.out.println(y3);
         System.out.println(y5);
-        System.out.println(y4);
+        System.out.println(y4);*/
+
+        Fraction fr = new Fraction(7, 12);
+        System.out.println(fr.intValue());
+        System.out.println(fr.doubleValue());
+        System.out.println(fr.longValue());
+        System.out.println(fr.floatValue());
     }
 }
