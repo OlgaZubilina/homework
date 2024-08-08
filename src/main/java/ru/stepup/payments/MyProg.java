@@ -1,4 +1,4 @@
-package ru.stepup.payments.mobile;
+package ru.stepup.payments;
 
 public class MyProg {
     public static void main(String[] args) {

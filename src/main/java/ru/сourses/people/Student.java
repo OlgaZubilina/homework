@@ -1,9 +1,11 @@
+package ru.сourses.people;
+
 import java.util.ArrayList;
 
 
 public class Student {
-    private String name;
-    public ArrayList<Integer> grades = new ArrayList<Integer>();
+    public String name;
+    public static ArrayList<Integer> grades = new ArrayList<Integer>();
 
     public Student(String name) {
         this.setName(name);
@@ -20,12 +22,12 @@ public class Student {
     public ArrayList<Integer> getGrades() {
         return grades;
     }
-    public void setGrade(int grade) {
+    public static void setGrade(int grade) {
         if (grade < 2 || grade > 5)
             throw new IllegalArgumentException("Grade must be > 1 and < 6");
         grades.add(grade);
     }
-    public ArrayList<Integer> setGrades(int[] integers) {
+    public static ArrayList<Integer> setGrades(int[] integers) {
         for (int i = 0; i < integers.length; i++) {
             setGrade(integers[i]);
         }

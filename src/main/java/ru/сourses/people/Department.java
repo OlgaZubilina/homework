@@ -1,3 +1,5 @@
+package ru.сourses.people;
+
 public class Department {
    private final String title;
    private Employee boss;

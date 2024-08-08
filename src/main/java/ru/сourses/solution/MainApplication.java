@@ -1,12 +1,17 @@
-package ru.stepup.payments.mobile;
+package ru.сourses.solution;
 
+
+import ru.сourses.geometry.*;
+import ru.сourses.people.Department;
+import ru.сourses.people.Employee;
+import ru.сourses.people.Student;
 
 import java.util.Arrays;
 
 public class MainApplication {
     public static void main(String[] args) {
 
-      /*  Point a = new Point(1, 3);
+       Point a = new Point(1, 3);
         Point b = new Point(5, 8);
         Point c = new Point(10, 11);
         Point d = new Point(15, 19);
@@ -19,7 +24,7 @@ public class MainApplication {
         cd.getPoint2().setX(3);
         cd.getPoint2().setY(54);
         System.out.println(cd);
-        System.out.println(cd.getLength() + bc.getLength() + ab.getLength());*/
+        System.out.println(cd.getLength() + bc.getLength() + ab.getLength());
         //Создаем ломаную линию
        //Задание №3 Объекты и классы. Ломаная линия
         //1 Создать Ломаную, проходящую через точки {1;5}, {2;8}, {5;3}, {8,9}
@@ -63,15 +68,42 @@ public class MainApplication {
         System.out.println(m.getLength("string"));
 
 
-      /*  Square abcd = new Square(new Point(9,4),5);
+      Square abcd = new Square(new Point(9,4),5);
         System.out.println(abcd);
         Point pointA = new Point(6,4);
         abcd.setPoint(pointA);
         System.out.println(abcd);
         System.out.println(abcd.getPoint());
         System.out.println(abcd.getSideLength());
-        Point3D f = new Point3D(4,5,6);
-        System.out.println(f);
-    }*/
+        Point3D f1 = new Point3D(4,5,6);
+        System.out.println(f1);
+
+        Student s1 = new ru.сourses.people.Student("Sasha");
+        Student s2 = new ru.сourses.people.Student("Vasya", new int[]{2, 5, 4, 3});
+        s1.setGrades(new int[]{4,2,3,4,5});
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s1.getGrades());
+        s2.setGrades(new int[]{5,2,3,4,5,4});
+        System.out.println(s2.getGrades());
+        s1.setGrade(5);
+        System.out.println(s1.getGrades());
+        Department dep1 = new ru.сourses.people.Department("develop");
+       Department dep2 = new ru.сourses.people.Department("analityc");
+       Department dep3 = new ru.сourses.people.Department("qa");
+        Employee y1 = new ru.сourses.people.Employee("Vanya",dep1);
+        Employee y2 = new ru.сourses.people.Employee("Olga",dep1);
+        Employee y3 = new ru.сourses.people.Employee("Petya",dep2);
+        Employee y4 = new ru.сourses.people.Employee("Ilya",dep3);
+        Employee y5 = new ru.сourses.people.Employee("Danya",dep2);
+        System.out.println(y2);
+        dep3.setBoss(y4);
+        dep2.setBoss(y3);
+        System.out.println(dep1);
+        System.out.println(y1);
+        System.out.println(y2);
+        System.out.println(y3);
+        System.out.println(y5);
+        System.out.println(y4);
 
 }}

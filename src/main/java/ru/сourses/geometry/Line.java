@@ -1,4 +1,4 @@
-package ru.stepup.payments.mobile;
+package ru.сourses.geometry;
 
 public class Line implements Measurable{
     private Point point1;

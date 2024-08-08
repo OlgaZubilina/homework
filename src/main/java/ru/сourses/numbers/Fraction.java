@@ -1,7 +1,12 @@
+package ru.сourses.numbers;
+
+import java.util.ArrayList;
+
 public class Fraction extends Number{
 
     private int numerator;
     private int denominator;
+
 
     public Fraction(int numerator, int denominator) {
         this.setNumerator(numerator);
@@ -97,4 +102,10 @@ public class Fraction extends Number{
     public double doubleValue() {
         return (double) numerator/denominator;
     }
+    double sumAll(ArrayList<Number> arr){
+        double sum = 0.0;
+        for (Number i:arr){
+            sum = sum+i.doubleValue();
+        }
+        return sum;}
 }
