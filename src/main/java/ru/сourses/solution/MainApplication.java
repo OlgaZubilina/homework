@@ -8,8 +8,16 @@ import ru.сourses.people.Student;
 
 import java.util.Arrays;
 
+
+import static java.lang.Integer.parseInt;
+import static java.lang.Math.pow;
+
 public class MainApplication {
+
+
     public static void main(String[] args) {
+
+     getPow(args[0],args[1]);
 
        Point a = new Point(1, 3);
         Point b = new Point(5, 8);
@@ -106,4 +114,12 @@ public class MainApplication {
         System.out.println(y5);
         System.out.println(y4);
 
-}}
+        
+
+}
+   public static void getPow(String strX, String strY) {
+        double x = parseInt(strX);
+        double y = parseInt(strY);
+        System.out.println(pow(x,y));
+    }
+}
