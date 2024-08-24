@@ -6,6 +6,7 @@ import ru.сourses.people.Department;
 import ru.сourses.people.Employee;
 import ru.сourses.people.Student;
 
+import java.awt.geom.Point2D;
 import java.util.Arrays;
 
 
@@ -26,6 +27,9 @@ public class MainApplication {
         Line ab = new Line(a, b);
         Line bc = new Line(c, d);
         Line cd = new Line(ab.getPoint2(), bc.getPoint1());
+        System.out.println(a);
+        java.awt.Point i = new java.awt.Point(4,9) ;
+        System.out.println(i);
 
         cd.getPoint1().setX(1);
         cd.getPoint1().setY(23);
