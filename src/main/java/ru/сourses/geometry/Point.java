@@ -56,12 +56,49 @@ public class Point implements Cloneable {
     }
 
     public static void main(String[] args) throws Exception {
-        Point p1 = new Point(1, 5);
-        Point p2 = p1.clone();
-        System.out.println(p2 == p1);
-        System.out.println(p2.equals(p1));
-        System.out.println(p1.equals(p2));
-        System.out.println(p1.x == p2.x);
-        System.out.println(p1.y == p2.y);
+
+        Point p1 = new Point(5,8);
+        Point p2 = new Point( 9,15);
+        Line l1 = new Line(p1,p2);
+        Line l2 = l1.clone();
+        System.out.println(l2==l1);
+        System.out.println(l2.equals(l1));
+        System.out.println(l1.equals(l2));
+        l2.start.x=88;
+        System.out.println(l2.equals(l1));
+        System.out.println(l1.equals(l2));
+
+
+
+
+
+    }
+     static class Line implements Cloneable{
+        @Override
+        protected Line clone() throws CloneNotSupportedException {
+            Line l =  (Line) super.clone();
+            l.end = (Point)this.end.clone();
+            l.start = (Point)this.start.clone();
+            return l;
+        }
+
+        Point start,end;
+        public Line(Point start, Point end) {
+            this.start = start;
+            this.end = end;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Line line = (Line) o;
+            return Objects.equals(start, line.start) && Objects.equals(end, line.end);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(start, end);
+        }
     }
 }
