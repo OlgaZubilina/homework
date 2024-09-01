@@ -1,5 +1,6 @@
 package ru.сourses.geometry;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Point implements Cloneable {
@@ -57,18 +58,14 @@ public class Point implements Cloneable {
 
     public static void main(String[] args) throws Exception {
 
-        Point p1 = new Point(5,8);
-        Point p2 = new Point( 9,15);
-        Line l1 = new Line(p1,p2);
-        Line l2 = l1.clone();
-        System.out.println(l2==l1);
-        System.out.println(l2.equals(l1));
-        System.out.println(l1.equals(l2));
-        l2.start.x=88;
-        System.out.println(l2.equals(l1));
-        System.out.println(l1.equals(l2));
+        PolyLine p1 = new PolyLine(new Point(1,2),new Point(3,4),new Point(5,6));
+        PolyLine p2 = new PolyLine(new Point(1,2),new Point(3,4),new Point(5,6));
+        PolyLine p3 = new PolyLine(new Point(1,2),new Point(3,3),new Point(5,6));
 
-
+        System.out.println(p1.equals(p2));
+        System.out.println(p2.equals(p3));
+        System.out.println(p3.equals(p1));
+        System.out.println(p2.equals(p1));
 
 
 
@@ -99,6 +96,48 @@ public class Point implements Cloneable {
         @Override
         public int hashCode() {
             return Objects.hash(start, end);
+        }
+    }
+
+    static class PolyLine{
+
+        Point[] points;
+
+        public PolyLine(Point... points) {
+
+            this.points = points;
+
+        }
+
+        public double length(){
+
+            double sum=0,len1,len2;
+
+            for(int i=0;i<points.length-1;i++){
+
+                len1=points[i].x-points[i-1].x;
+
+                len2=points[i].y-points[i-1].y;
+
+                sum+=Math.sqrt(len1*len1+len2*len2);
+
+            }
+
+            return sum;
+
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            PolyLine polyLine = (PolyLine) o;
+            return Objects.deepEquals(points, polyLine.points);
+        }
+
+        @Override
+        public int hashCode() {
+            return Arrays.hashCode(points);
         }
     }
 }
