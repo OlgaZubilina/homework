@@ -20,7 +20,9 @@ public class Bird implements Singable {
         birds.add(p1);
         birds.add(c1);
         birds.add(s1);
-
+        p1.sing();
+        c1.sing();
+        s1.sing();
     }
 
 
