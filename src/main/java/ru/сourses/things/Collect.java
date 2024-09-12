@@ -29,13 +29,17 @@ reverse(numbers);
         arrayList.add("asd");
         Stream<String> listStream = arrayList.stream();
         System.out.println(getStringFromStream(listStream));
+        printList(numbers);
         }
 
     public static String getStringFromStream(Stream stringStream) {
        return (String) stringStream.collect(Collectors.joining(" "));
 
     }
-
+    public static void printList(ArrayList list) {
+        Stream<Integer> stream = list.stream();
+         stream.forEach(integer -> System.out.println(integer));
+    }
     public static void reverse(ArrayList<Integer>ints) {
         int n = ints.size() - 1;
         for (int i = 0; i < ints.size() / 2; i++) {
