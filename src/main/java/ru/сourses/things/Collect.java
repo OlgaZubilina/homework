@@ -2,6 +2,10 @@ package ru.сourses.things;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import static java.util.Collections.swap;
 
 public class Collect {
@@ -19,9 +23,18 @@ public class Collect {
 reverse(numbers);
         System.out.println(numbers.toString());
 
-
-
+        ArrayList<String> arrayList = new ArrayList<String>();
+        arrayList.add("qwe");
+        arrayList.add("rty");
+        arrayList.add("asd");
+        Stream<String> listStream = arrayList.stream();
+        System.out.println(getStringFromStream(listStream));
         }
+
+    public static String getStringFromStream(Stream stringStream) {
+       return (String) stringStream.collect(Collectors.joining(" "));
+
+    }
 
     public static void reverse(ArrayList<Integer>ints) {
         int n = ints.size() - 1;
